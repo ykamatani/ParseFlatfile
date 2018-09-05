@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191A28E8213FB91A00DC21B2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 191A28E7213FB91A00DC21B2 /* main.cpp */; };
+		191A2903213FB94100DC21B2 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 191A2902213FB94100DC21B2 /* Makefile */; };
+		191A2911213FB96000DC21B2 /* output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 191A2904213FB95F00DC21B2 /* output.cpp */; };
+		191A2912213FB96000DC21B2 /* ybase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 191A2905213FB95F00DC21B2 /* ybase.cpp */; };
+		191A2913213FB96000DC21B2 /* ParseFlatfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 191A2906213FB95F00DC21B2 /* ParseFlatfile.cpp */; };
+		191A2914213FB96000DC21B2 /* bGeno.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 191A290A213FB95F00DC21B2 /* bGeno.cpp */; };
+		191A2915213FB96000DC21B2 /* bed2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 191A290C213FB95F00DC21B2 /* bed2.cpp */; };
+		191A2916213FB96000DC21B2 /* locus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 191A290D213FB95F00DC21B2 /* locus.cpp */; };
+		191A2917213FB96000DC21B2 /* flatfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 191A290E213FB95F00DC21B2 /* flatfile.cpp */; };
+		191A291A213FB9A600DC21B2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2919213FB9A600DC21B2 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +32,21 @@
 
 /* Begin PBXFileReference section */
 		191A28E4213FB91A00DC21B2 /* ParseFlatfile */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ParseFlatfile; sourceTree = BUILT_PRODUCTS_DIR; };
-		191A28E7213FB91A00DC21B2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		191A2902213FB94100DC21B2 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		191A2904213FB95F00DC21B2 /* output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = output.cpp; sourceTree = "<group>"; };
+		191A2905213FB95F00DC21B2 /* ybase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ybase.cpp; sourceTree = "<group>"; };
+		191A2906213FB95F00DC21B2 /* ParseFlatfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParseFlatfile.cpp; sourceTree = "<group>"; };
+		191A2907213FB95F00DC21B2 /* ybase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ybase.h; sourceTree = "<group>"; };
+		191A2908213FB95F00DC21B2 /* flatfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flatfile.h; sourceTree = "<group>"; };
+		191A2909213FB95F00DC21B2 /* output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = output.h; sourceTree = "<group>"; };
+		191A290A213FB95F00DC21B2 /* bGeno.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bGeno.cpp; sourceTree = "<group>"; };
+		191A290B213FB95F00DC21B2 /* locus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locus.h; sourceTree = "<group>"; };
+		191A290C213FB95F00DC21B2 /* bed2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bed2.cpp; sourceTree = "<group>"; };
+		191A290D213FB95F00DC21B2 /* locus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = locus.cpp; sourceTree = "<group>"; };
+		191A290E213FB95F00DC21B2 /* flatfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flatfile.cpp; sourceTree = "<group>"; };
+		191A290F213FB95F00DC21B2 /* bGeno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bGeno.h; sourceTree = "<group>"; };
+		191A2910213FB95F00DC21B2 /* bed2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bed2.h; sourceTree = "<group>"; };
+		191A2919213FB9A600DC21B2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191A291A213FB9A600DC21B2 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +64,10 @@
 		191A28DB213FB91A00DC21B2 = {
 			isa = PBXGroup;
 			children = (
+				191A2902213FB94100DC21B2 /* Makefile */,
 				191A28E6213FB91A00DC21B2 /* ParseFlatfile */,
 				191A28E5213FB91A00DC21B2 /* Products */,
+				191A2918213FB9A600DC21B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +82,29 @@
 		191A28E6213FB91A00DC21B2 /* ParseFlatfile */ = {
 			isa = PBXGroup;
 			children = (
-				191A28E7213FB91A00DC21B2 /* main.cpp */,
+				191A290C213FB95F00DC21B2 /* bed2.cpp */,
+				191A2910213FB95F00DC21B2 /* bed2.h */,
+				191A290A213FB95F00DC21B2 /* bGeno.cpp */,
+				191A290F213FB95F00DC21B2 /* bGeno.h */,
+				191A290E213FB95F00DC21B2 /* flatfile.cpp */,
+				191A2908213FB95F00DC21B2 /* flatfile.h */,
+				191A290D213FB95F00DC21B2 /* locus.cpp */,
+				191A290B213FB95F00DC21B2 /* locus.h */,
+				191A2904213FB95F00DC21B2 /* output.cpp */,
+				191A2909213FB95F00DC21B2 /* output.h */,
+				191A2906213FB95F00DC21B2 /* ParseFlatfile.cpp */,
+				191A2905213FB95F00DC21B2 /* ybase.cpp */,
+				191A2907213FB95F00DC21B2 /* ybase.h */,
 			);
 			path = ParseFlatfile;
+			sourceTree = "<group>";
+		};
+		191A2918213FB9A600DC21B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				191A2919213FB9A600DC21B2 /* libz.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191A28E8213FB91A00DC21B2 /* main.cpp in Sources */,
+				191A2917213FB96000DC21B2 /* flatfile.cpp in Sources */,
+				191A2916213FB96000DC21B2 /* locus.cpp in Sources */,
+				191A2903213FB94100DC21B2 /* Makefile in Sources */,
+				191A2914213FB96000DC21B2 /* bGeno.cpp in Sources */,
+				191A2915213FB96000DC21B2 /* bed2.cpp in Sources */,
+				191A2912213FB96000DC21B2 /* ybase.cpp in Sources */,
+				191A2911213FB96000DC21B2 /* output.cpp in Sources */,
+				191A2913213FB96000DC21B2 /* ParseFlatfile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +290,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +300,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

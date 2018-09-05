@@ -47,6 +47,8 @@
 		191A290F213FB95F00DC21B2 /* bGeno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bGeno.h; sourceTree = "<group>"; };
 		191A2910213FB95F00DC21B2 /* bed2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bed2.h; sourceTree = "<group>"; };
 		191A2919213FB9A600DC21B2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		191A291B213FBA9A00DC21B2 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		191A291C213FBAAB00DC21B2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,10 @@
 		191A28DB213FB91A00DC21B2 = {
 			isa = PBXGroup;
 			children = (
+				191A291C213FBAAB00DC21B2 /* README.md */,
+				191A291B213FBA9A00DC21B2 /* COPYING */,
 				191A2902213FB94100DC21B2 /* Makefile */,
-				191A28E6213FB91A00DC21B2 /* ParseFlatfile */,
+				191A28E6213FB91A00DC21B2 /* src */,
 				191A28E5213FB91A00DC21B2 /* Products */,
 				191A2918213FB9A600DC21B2 /* Frameworks */,
 			);
@@ -79,7 +83,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		191A28E6213FB91A00DC21B2 /* ParseFlatfile */ = {
+		191A28E6213FB91A00DC21B2 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				191A290C213FB95F00DC21B2 /* bed2.cpp */,
@@ -96,7 +100,7 @@
 				191A2905213FB95F00DC21B2 /* ybase.cpp */,
 				191A2907213FB95F00DC21B2 /* ybase.h */,
 			);
-			path = ParseFlatfile;
+			path = src;
 			sourceTree = "<group>";
 		};
 		191A2918213FB9A600DC21B2 /* Frameworks */ = {

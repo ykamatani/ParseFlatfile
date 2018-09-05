@@ -1,7 +1,7 @@
 BOOST = /export/home1/ykamatani/local/include
 
 CPP       = g++
-CPPFLAGS = -Wall -O4 -fopenmp
+CPPFLAGS = -Wall -O4
 LIBS     = -lz
 OBJS     = ParseFlatfile.o bed2.o ybase.o flatfile.o bGeno.o locus.o output.o
 PROGRAM  = ParseFlatfile

@@ -1,9 +1,24 @@
-//
-//  flatfile.h
-//  ParseFlatfile2
-//
-//  Created by Yoichiro Kamatani on 8/6/13.
-//
+/*
+ flatfile.h
+ 
+ Created by Yoichiro Kamatani on 8/06/13.
+ Copyright (c) 2013 Yoichiro Kamatani.
+ 
+ This file is part of ParseFlatfile.
+ 
+ ParseFlatfile is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ ParseFlatfile is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with ParseFlatfile.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #ifndef __ParseFlatfile__flatfile__
 #define __ParseFlatfile__flatfile__

@@ -1,10 +1,24 @@
-//
-//  main.cpp
-//  ParseBed
-//
-//  Created by Yoichiro Kamatani on 3/9/13.
-//  Copyright (c) 2013 Yoichiro Kamatani. All rights reserved.
-//
+/*
+  ParseFlatfile.cpp
+
+  Created by Yoichiro Kamatani on 3/9/13.
+  Copyright (c) 2013 Yoichiro Kamatani. 
+
+This file is part of ParseFlatfile.
+
+ParseFlatfile is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+ParseFlatfile is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with ParseFlatfile.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 #include <iostream>
 #include <getopt.h>
@@ -27,7 +41,6 @@ int main(int argc, char ** argv)
         {"flatfile", required_argument, 0, 'f'},
         {"make-bed", no_argument, 0, 'b'},
         {"recode", no_argument, 0, 'r'},
-//        {"thread", required_argument, 0, 't'},
         {"out", required_argument, 0, 'o'},
         {0, 0, 0, 0}
     };

@@ -128,13 +128,6 @@ vector<string> fam::names(){
     return RetVec;
 }
 
-//vector<individual*> fam::inds(){
-//    vector<individual*> RetVec;
-//    vector<individual>::iterator iSamp;
-//    for(iSamp = sample.begin();iSamp != sample.end();iSamp++)
-//        RetVec.push_back(&*iSamp);
-//    return RetVec;
-//}
 //-----------------------------------------------------------
 // bim class
 //-----------------------------------------------------------
@@ -482,25 +475,9 @@ void binary_ped::extractSNPs(string snp_file){
     SNPS.close();
 }
 
-//void binary_ped::test_markerNames(){
-//    cout << "Writing marker names..." << endl;
-//    vector<string> markers = be.markerNames();
-//
-//    vector<string>::iterator m;
-//    for(m = markers.begin();m != markers.end();m++)
-//        cout << *m << endl;
-//
-//}
-
-//void binary_ped::test_count(){
-//    be.count();
-//}
-
 GENO* binary_ped::genotype(int INDidx,int SNPidx){
     return be.bgenos[SNPidx]->get_genotype(INDidx);
 
-//    vector<GENO> genos = be.genotypes_per_marker(SNPidx);
-//    return genos[INDidx];
 }
 
 GENO* binary_ped::genotype(string FID,string IID,string MarkerName){
@@ -511,8 +488,6 @@ GENO* binary_ped::genotype(string FID,string IID,string MarkerName){
 
     vector<GENO*> genos = be.genotypes_per_marker(SNPidx);
     RetGeno = genos[INDidx];
-//    individual *tmp = new individual(FID,IID,"0","0","0","0");
-//    RetGeno->ind = tmp;
     return RetGeno;
 }
 
@@ -526,18 +501,13 @@ vector<GENO*> binary_ped::genotypes(string MarkerName){
     }
 
     vector<GENO*> genos = be.genotypes_per_marker(SNPidx);
-    // vector<individual*> inds = fa.inds();
-//    for(int i=0;i < (int)genos.size();i++)
-//        genos[i]->ind = fa.sample[i];
+
     return genos;
 }
 
 vector<GENO*> binary_ped::genotypes(int MarkerIdx)
 {
     vector<GENO*> genos = be.genotypes_per_marker(MarkerIdx);
-    // vector<individual*> inds = fa.inds();
-//    for(int i=0;i < (int)genos.size();i++)
-//        genos[i]->ind = fa.sample[i];
 
     return genos;
 }
@@ -553,10 +523,6 @@ vector<GENO*> binary_ped::genotypes(string FID,string IID){
 
     vector<GENO*> genos = be.genotypes_per_ind(INDidx);
     vector<locus*> markers = bi.markers();
-
-    // individual *tmp = new individual(FID, IID, "0", "0", "0", "-9");
-//    for(int i = 0; i < (int)genos.size();i++)
-//        genos[i]->ind = fa.sample[INDidx];
 
     return genos;
 }

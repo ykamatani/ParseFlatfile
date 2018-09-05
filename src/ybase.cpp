@@ -219,9 +219,6 @@ char* lTrimChar(char* input,int point){
     return RetChar;
 }
 
-/* char* rTrimChar(char* input,int point){
-    
-} */
 
 string GetStrAfterStr(string str,string cut){
     return str.substr(str.find(cut)+1);
@@ -287,7 +284,6 @@ string GzReader::GetGzLine()
     }
     
     while((char_lim = gzread(gzf, reading, ReadLength)) > 0){
-        // printf("%s",reading);
         reading[char_lim] = 0;
         bool ReturnCodeExists;
         string ThisStr = CopyStrBeforeStr(string(reading),"\n",ReturnCodeExists);
@@ -303,33 +299,6 @@ string GzReader::GetGzLine()
     BufferStr.clear();
     return RetStr;
 }
-
-/*
-vector<string> GzReader::GetGzItems(){
-    bool    flag = true;
-    int     char_lim,tmp_cnt;
-    char    tmp[ReadLength];
-    
-    tmp_cnt = 0;
-    for (int i = 0;i < ReadLength; i++){
-        if (reading[i] == 0){
-        } else if (reading[i] == '\n'){
-        } else if (delim == 0 && (reading[i] == '\t' || reading[i] == ' ') && tmp_cnt > 0){
-            
-        } else if (reading[i] == delim){
-            
-        } else {
-            tmp[tmp_cnt++] = reading[i];
-            tmp[tmp_cnt] = 0;
-        }
-    }
-    
-    
-    while(flag || (char_lim = gzread(gzf,reading,ReadLength)) > 0){
-        
-    }
-}
-*/
 
 void GzReader::counter(int &Nrow,int &Ncol,int &TitleNcol,bool verbose){
     printf("Checking file size of [ %s ]...",FileName.c_str());

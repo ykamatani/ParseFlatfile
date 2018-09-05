@@ -38,16 +38,11 @@ bGeno_SNPmajor::bGeno_SNPmajor(int nSamp,locus* l):Ngeno(0),loc(l){
 }
 
 bGeno_SNPmajor::bGeno_SNPmajor(int nSamp):Ngeno(0),loc(NULL){
-//    bgeno.reserve(numSNPs);
 	one.resize(nSamp/8+1,0);
 	two.resize(nSamp/8+1,0);
 }
 
 void bGeno_SNPmajor::append(bool b1, bool b2){
-//    bitset<2> tmp;
-//    tmp[1] = b1;
-//    tmp[0] = b2;
-//    bgeno.push_back(tmp);
 	one[Ngeno / 8].set(Ngeno % 8,b1);
 	two[Ngeno / 8].set(Ngeno % 8,b2);
 	Ngeno++;
@@ -55,8 +50,6 @@ void bGeno_SNPmajor::append(bool b1, bool b2){
 
 geno_cnt bGeno_SNPmajor::count(){
     geno_cnt cnt;
-//    vector<bitset<2> >::iterator b;
-//    for (b = bgeno.begin() ;b != bgeno.end(); b++)
     for(int i = 0;i < Ngeno; i++)
     {
     	bitset<2> tmp;
@@ -95,7 +88,6 @@ vector<GENO*> bGeno_SNPmajor::get_genotypes(){
 GENO* bGeno_SNPmajor::get_genotype(int idx){
     GENO *tmp = new GENO();
 
-//    switch (bgeno[idx].to_ulong()) {
     switch (dosage(idx)) {
         case 0: 	tmp->G1 = tmp->G2 = loc->a1;          break;
         case 1: 	tmp->G1 = loc->a1; tmp->G2 = loc->a2; break;
@@ -121,15 +113,6 @@ int bGeno_SNPmajor::dosage(int idx) {
 		return 2;
 
 	return -9;
-
-//    switch (bgeno[idx].to_ulong()) {
-//        case 0: return 0;
-//        case 1: return 1;
-//        case 2: return -9;
-//        case 3: return 2;
-//        default: break;
-//    }
-//    return -9;
 }
 
 double bGeno_SNPmajor::Freq1(){

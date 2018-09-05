@@ -2,7 +2,7 @@
   ParseFlatfile.cpp
 
   Created by Yoichiro Kamatani on 3/9/13.
-  Copyright (c) 2013 Yoichiro Kamatani. 
+  Copyright (c) 2013 Yoichiro Kamatani.
 
 This file is part of ParseFlatfile.
 
@@ -45,7 +45,6 @@ int main(int argc, char ** argv)
         {0, 0, 0, 0}
     };
     int     opt,option_index = 0;
-//    int num_threads = 1;
     string  fFile = "",oFile = "";
     bool makebed = false, recode = false;
 
@@ -54,7 +53,6 @@ int main(int argc, char ** argv)
             case 'f':   fFile = string(optarg);		break;
             case 'b':   makebed = true;				break;
             case 'r':   recode = true;				break;
-//            case 't':   num_threads = atoi(optarg);	break;
             case 'o':   oFile = string(optarg);		break;
             default:    break;
         }
@@ -69,10 +67,7 @@ int main(int argc, char ** argv)
 		check_arg(oFile, "Output file name is not specified.");
 
 		flatfile f;
-//		f.read(fFile);
-//		f.makebed(oFile);
 		f.writeBITdirect(fFile,oFile);
-//		f.debug();
     }
     
     if (recode)

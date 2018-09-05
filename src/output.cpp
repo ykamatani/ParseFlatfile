@@ -170,24 +170,17 @@ void Gout::write_BEDFILE(string FileName)
 			vector<bitset<8> >::iterator i2 = bg->two.begin();
 			int bitidx = 0;
 			int nSamp = bg->size();
-//			cout << nSamp << endl;
-//			exit(1);
 			int cnt = 0;// , cnt1 = 0, cnt2 = 0;
 
 			// Inner loop over individuals
-//			while (i1 != bg->one.end())
-//			cout << "flag0" << endl;
 			while (cnt < nSamp)
 			{
 				bitset<8> bits;
 				bits.reset();
 				int c = 0;
-//				cout << "flag1" << endl;
 
-//				while (c < 8 && cnt < nSamp && i1 != bg->one.end())
 				while (c < 8 && cnt < nSamp)
 				{
-//					cout << "flag2" << endl;
 					if ( (*i1)[bitidx] ) bits.set(c);
 					c++;
 					if ( (*i2)[bitidx] ) bits.set(c);
@@ -197,21 +190,16 @@ void Gout::write_BEDFILE(string FileName)
 
 					if ( bitidx > 7)
 					{
-//						cout << "flag3" << endl;
 						bitidx = 0;
-//						cout << "[" << *i1 << "," << *i2 << "]" << endl;
 						i1++;
 						i2++;
 					}
 				}
-//				cout << "flag4" << endl;
-//				cout << cnt << ":" << bits << endl;
 
 				char ch[1];
 				ch[0] = (char)bits.to_ulong();
 				BED.write(ch,1);
 			}
-//			exit(1);
 		}
 	}
 	BED.close();

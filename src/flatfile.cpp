@@ -108,9 +108,7 @@ void flatfile::readGenotypes(string &s,int SNPidx)
 		}
 		bg->append(ba1,ba2);
 	}
-//	for(int i=0;i<nSamp;i++) cout << strs[i+1] << "\t:\t" << bg->get_genotype(i)->str(" ") << endl;
-//	cout << l->name << ":\t" << bg->count().str() << endl;	// DEBUG
-//	cout << bg->one.size() "," << bg->two.size() << endl;
+
 	b->be.bgenos[SNPidx] = bg;
 }
 
@@ -120,22 +118,18 @@ void flatfile::createBits(string &s,int SNPidx,vector<bitset<8> > &bits,string &
 	boost::trim_if(s,boost::is_any_of("\n\r"));
 	boost::split(strs,s,boost::is_any_of(","));
 
-//	for(int i=1;i<strs.size();i++) if (strs[i].size() != 2) cout << s <<  endl;
 
 	/* get locus info */
 //	string a1,a2;
 	determineAlleles(strs,a1,a2);
-//	locus *l = new locus(0,strs[0],0,a1,a2);
 	SNPname = strs[0];
 
-//	b->bi.loci[SNPidx] = l;
 	bits.clear();
 	int c = 0;
 	bitset<8> bit;
 	bit.reset();
 
 	/* store genotypes */
-//	bGeno_SNPmajor *bg = new bGeno_SNPmajor(nSamp,l);
 	for(int i=1; i < nSamp+1;i++)
 	{
 		if (strs[i] == a1+a1){
@@ -171,7 +165,6 @@ void flatfile::CheckStrangeAllele(multimap<int,int> &Sals)
 			snprintf(tmp,255,"Invalid allele [ %c ] found.",im->second);
 			ErrorWithStopMessage(string(tmp));
 		}
-//		obsAlleles.push_back(im->second);
 	}
 
 
@@ -185,8 +178,7 @@ void flatfile::determineAlleles(vector<string> &genos,string &a1,string &a2)
 	for(int i=1;i < (int)genos.size();i++)
 	{
 		if ((int)genos[i].size() != 2) {
-//			 for(int j=0;j<genos.size();j++) cout << (j==i?"[":"") << genos[j] << (j==i?"]":"") << ",";
-//			 cout << endl << i << endl;
+
 			ErrorWithStopMessage("Invalid genotype [ "+genos[i]+" ] at [ "+genos[0]+" ]");
 		}
 		alcnt[(int)genos[i][0]] ++;	alcnt[(int)genos[i][1]] ++;
@@ -210,12 +202,6 @@ void flatfile::determineAlleles(vector<string> &genos,string &a1,string &a2)
 		return;
 	}
 
-//	if (genos[0] == "rs4240138"){
-//		multimap<int,int>::iterator tmpt;
-//		for(tmpt = Sals.begin();tmpt != Sals.end();tmpt++)
-//			printf("%c,%d\n",(char)tmpt->second,tmpt->first);
-//		exit(1);
-//	}
 
 	/* Determine alleles */
 	multimap<int,int>::iterator im;
@@ -270,9 +256,6 @@ void flatfile::read(string FileName)
 
     	if (mode == 1) c++;
 
-//    	if (c % 10 == 0) cout << "[" << c << "]" << endl;
-//    	if (c > 10) exit(1);	// DEBUG
-//    	if (c % 1000 == 0) printf("%d lines...\n",c);
     }
 
     printf("%d data lines were loaded.\n",c);
@@ -379,14 +362,6 @@ void flatfile::recode(string OutFile)
 
 void flatfile::debug()
 {
-//	if (b == NULL)
-//	{
-//		printf("Genotype data was not loaded.\n");
-//	} else {
-//		printf("Genotype data summary:\n");
-//		printf("\t%d individuals\n",b->SampleSize());
-//		printf("\t%d SNPs\n",b->MarkerSize());
-//	}
 	for(int i=0;i<10;i++) cout << b->fa.sample[i]->ID() << endl;
 	for(int i=0;i<10;i++) cout << b->bi.loci[i]->name << endl;
 }

@@ -67,10 +67,8 @@ public:
 
 class GENO{
 public:
-    // string FID,IID;
     string MarkerName;
     string G1,G2;
-//    individual* ind;
 
     GENO():MarkerName(""),G1(""),G2(""){};
     GENO(string name):MarkerName(name),G1(""),G2(""){};

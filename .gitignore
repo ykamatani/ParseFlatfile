@@ -1,1 +1,2 @@
-ParseFlatfile.xcodeproj
+*.xcodeproj/*
+.DS_Store

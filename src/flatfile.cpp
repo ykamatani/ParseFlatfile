@@ -303,12 +303,12 @@ void flatfile::writeBITdirect(string FileName,string OutFile)
 	string s;
 	int mode = 0;
 
-	printf("Writing genotype bitfile to [ %s ] \n",(OutFile+".bed").c_str());
-	ofstream BIT((OutFile+".bed").c_str(), ios::out | ios::binary);
-	printf("Using (default) SNP-major mode\n");
-	writeBEDheader(BIT);
-
-	ofstream BIM((OutFile+".bim").c_str(), ios::out);
+//    printf("Writing genotype bitfile to [ %s ] \n",(OutFile+".bed").c_str());
+//    ofstream BIT((OutFile+".bed").c_str(), ios::out | ios::binary);
+//    printf("Using (default) SNP-major mode\n");
+//    writeBEDheader(BIT);
+//
+//    ofstream BIM((OutFile+".bim").c_str(), ios::out);
 
 	// Read header
     while(!(s = gzr->GetGzLine()).empty()){
@@ -327,6 +327,12 @@ void flatfile::writeBITdirect(string FileName,string OutFile)
 	go.write_FAMFILE(OutFile+".fam");
 
     // Read data lines and write into BED file directly
+    printf("Writing genotype bitfile to [ %s ] \n",(OutFile+".bed").c_str());
+    ofstream BIT((OutFile+".bed").c_str(), ios::out | ios::binary);
+    printf("Using (default) SNP-major mode\n");
+    writeBEDheader(BIT);
+    
+    ofstream BIM((OutFile+".bim").c_str(), ios::out);
     // Also, write BIM file directly
     int c = 0;
     while(!(s = gzr->GetGzLine()).empty()){

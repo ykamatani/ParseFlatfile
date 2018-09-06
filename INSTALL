@@ -5,7 +5,7 @@ ParseFlatfile depends on zlib library and boost library.
 
 For Cygwin: install following packages by setup.exe
 
-    gcc-g++, boost and boost-devel in Devel category
+    make,  gcc-g++, boost and boost-devel in Devel category
     zlib in Libs category
 
 Compilation

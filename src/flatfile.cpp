@@ -347,6 +347,12 @@ void flatfile::writeBITdirect(string FileName,string OutFile)
     }
 
     printf("%d data lines were loaded and written.\n",c);
+    if (c != nSNP)
+    {
+        fprintf(stderr, "Note that line count of data [ %d ] does not match with Number of markers in header info [ %d ].\n",
+                c, nSNP);
+        fprintf(stderr, "Please make sure that you are handling correct data file.\n");
+    }
     BIT.close();
     BIM.close();
 }

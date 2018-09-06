@@ -1,0 +1,20 @@
+Requirements
+===
+
+ParseFlatfile depends on zlib library and boost library.
+
+For Cygwin: install following packages by setup.exe
+
+    gcc-g++, boost and boost-devel in Devel category
+    zlib in Libs category
+
+Compilation
+===
+
+Following simple command may work
+
+```
+make
+```
+
+Binary file will appear under the project directory. Copy file to the appropriate path if necessary.
